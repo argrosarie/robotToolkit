@@ -10,7 +10,7 @@ const cartSlice = createSlice({
       state.cartProductIds = [action.payload, ...state.cartProductIds]
     },
     removeFromCart: (state, action) => {
-      const idIndex = state.cartProductIds.idIndex(action.payload)
+      const idIndex = state.cartProductIds.indexOf(action.payload)
       state.cartProductIds.splice(idIndex, 1)
     },
     clearAllItems: (state) => {
